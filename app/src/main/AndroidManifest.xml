@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".admin.admin_MainActivity"
-            android:label="@string/app_name"
+            android:name=".admin.login.Login"
+            android:label="SFSS ADMIN"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".admin.admin_pageone" />
-        <activity android:name=".admin.admin_pagetwo" />
-        <activity android:name=".admin.admin_pagethree" />
+
+        <activity android:name=".admin.admin_MainActivity" />
         <activity android:name=".admin.admin_hapusakun" />
         <activity android:name=".admin.admin_buatakunpetani" />
         <activity android:name=".admin.admin_tambahkordinatlahan" />
@@ -29,17 +28,9 @@
         <activity android:name=".admin.admin_verifikasi" />
         <activity android:name=".admin.admin_slot" />
         <activity android:name=".admin.admin_laporan" />
-        <activity android:name=".admin.investor.investor_MainActivity" />
-        <activity android:name=".admin.investor.investor_mapslahan" />
-        <activity android:name=".admin.investor.investor_verifikasi" />
-        <activity android:name=".admin.investor.investor_belislot" />
-        <activity android:name=".admin.investor.investor_pageone" />
-        <activity android:name=".admin.investor.investor_pagetwo" />
-        <activity android:name=".admin.petani.petani_MainActivity" />
-        <activity android:name=".admin.petani.petani_pageone" />
-        <activity android:name=".admin.petani.petani_pagetwo" />
-        <activity android:name=".admin.petani.petani_tarikuang" />
-        <activity android:name=".admin.petani.petani_verifikasi"></activity>
+        <activity android:name=".admin.admin_tambahsaldoinvesator" />
+        <activity android:name=".admin.admin_tambahsaldopetani" />
+        <activity android:name=".admin.admin_buatakunadd"></activity>
     </application>
 
 </manifest>

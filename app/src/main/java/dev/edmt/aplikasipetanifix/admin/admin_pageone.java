@@ -68,7 +68,7 @@ public class admin_pageone extends Fragment {
         btntambahsaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),admin_verifikasi.class);
+                Intent intent = new Intent(getActivity(),admin_tambahsaldo.class);
                 startActivity(intent);
             }
         });
@@ -126,7 +126,7 @@ public class admin_pageone extends Fragment {
     private void btnkoordinat() {
 
 
-        btnkoordinat = (Button)view.findViewById(R.id.btntambahkoordinat);
+        btnkoordinat = (Button)view.findViewById(R.id.btnkoordinat);
         btnkoordinat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

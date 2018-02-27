@@ -1,5 +1,6 @@
 package dev.edmt.aplikasipetanifix.admin;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import dev.edmt.aplikasipetanifix.R;
 
@@ -56,5 +58,19 @@ public class admin_tambahsaldo extends AppCompatActivity implements NavigationVi
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void btn_investorsaldo(View view) {
+
+        Intent intent = new Intent(admin_tambahsaldo.this, admin_tambahsaldoinvesator.class);
+        startActivity(intent);
+
+    }
+
+    public void btn_petanisaldo(View view) {
+
+        Intent intent = new Intent(admin_tambahsaldo.this, admin_tambahsaldopetani.class);
+        startActivity(intent);
+
     }
 }

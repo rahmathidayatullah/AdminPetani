@@ -1,15 +1,15 @@
-package dev.edmt.aplikasipetanifix.admin.investor;
+package dev.edmt.aplikasipetanifix.admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import dev.edmt.aplikasipetanifix.R;
 
-public class investor_verifikasi extends AppCompatActivity {
+public class admin_tambahsaldoinvesator extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.investor_activity_verifikasi);
+        setContentView(R.layout.admin_activity_tambahsaldoinvesator);
     }
 }
