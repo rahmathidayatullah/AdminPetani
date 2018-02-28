@@ -1,6 +1,5 @@
 package dev.edmt.aplikasipetanifix.admin;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -13,10 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import dev.edmt.aplikasipetanifix.admin.login.Login;
-
 import dev.edmt.aplikasipetanifix.R;
 
 public class admin_MainActivity extends AppCompatActivity
@@ -24,7 +19,7 @@ public class admin_MainActivity extends AppCompatActivity
 
     private ViewPager mViewPager;
     private admin_SectionsPagerAdapter mSectionsPagerAdapter;
-    private FirebaseAuth firebaseAuth;
+
     private TabLayout mTabLayout;
 
     @Override
@@ -34,11 +29,6 @@ public class admin_MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        firebaseAuth = FirebaseAuth.getInstance();
-        if(firebaseAuth.getCurrentUser() == null){
-            finish();
-            startActivity(new Intent(this, dev.edmt.aplikasipetanifix.admin.login.Login.class));
-        }
         //Tabs
         mViewPager = (ViewPager) findViewById(R.id.main_tabPager);
         mSectionsPagerAdapter = new admin_SectionsPagerAdapter(getSupportFragmentManager());
@@ -88,12 +78,8 @@ public class admin_MainActivity extends AppCompatActivity
         if (id == R.id.nav_tentang) {
             // Handle the camera action
         } else if (id == R.id.nav_logout) {
-            firebaseAuth.signOut();
-            finish();
 
-            startActivity(new Intent(admin_MainActivity.this, dev.edmt.aplikasipetanifix.admin.login.Login.class));
-            }
-        
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
